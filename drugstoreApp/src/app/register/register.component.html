@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+
+            <form class= "form-container" class="form" #userSignUp= "ngForm" (ngSubmit)="registerUser()" >
+              <h1>Sign Up Here</h1> 
+              <br>
+
+              <div class="type">
+                <label  class="radio-inline"><input style="margin-left: 1vw;" type="radio" name="radio"  id="admin" value="admin">Admin</label>
+                <label  class="radio-inline"><input style="margin-left: 5vw;" type="radio" name="radio" checked id="user" value="user">Other Users</label>
+              </div>
+
+              &nbsp;
+
+              <div class="form-group">
+                <label>Full Name <font class="asterisk" color="red">*</font></label>
+                <input type="text" [(ngModel)]="registeredUser['name']" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" id="name" class="form-control rounded-0 rounded-pill form-control-lg" required name="name" pattern="^([A-Za-z. ]{3,30})$" >
+                <small class="text-danger" [class.d-none]="name.valid || name.touched">Please Enter Your Name</small>
+              </div> 
+              
+
+              <div class="form-group">
+                <label>Phone Number <font class="asterisk" color="red">*</font></label>
+                <input type="text" [(ngModel)]="registeredUser['phone']" #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched" id="phone" class="form-control rounded-0 rounded-pill form-control-lg" required name="phone" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$">
+                <small class="text-danger" [class.d-none]="phone.valid || phone.touched">Please Enter Your Phone Number</small>
+              </div> 
+
+
+                <div class="form-group">
+                  <label>E-mail Id <font class="asterisk" color="red">*</font></label>
+                  <input type="text" [(ngModel)]="registeredUser['email']" #email="ngModel" [class.is-invalid]="email.invalid && email.touched"  id="email"  class="form-control rounded-0 rounded-pill form-control-lg" required name="email" pattern="^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$">
+                  <small class="text-danger" [class.d-none]="email.valid || email.touched">Please Enter Your Email ID</small>
+                </div> 
+                  
+                <div class="form-group">
+                    <label>Password <font class="asterisk" color="red">*</font></label>
+                    <input type="password" [(ngModel)]="registeredUser['password']" #password="ngModel" [class.is-invalid]="password.invalid && password.touched" id="pwd" class="form-control rounded-0 rounded-pill form-control-lg" required name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$">
+                    <small class="text-danger" [class.d-none]="password.valid || password.touched">Please Enter a Valid Password</small>
+                  </div>
+                
+                <button type="submit" [disabled]="userSignUp.form.invalid" class="btn mt-5 btn-custom btn-block text-uppercase rounded-pill form-control-lg">SIGN UP</button>
+              <br>
+              <p class="mt-3">Already have an account ?<a routerLink="/login"> Login Now</a></p>
+              </form>
+            
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+  
+</div>
+
+

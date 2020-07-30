@@ -1,0 +1,165 @@
+<div class='card'>
+    <form #orderForm="ngForm" (ngSubmit)="AddOrder()">
+        <div class='card-header'>
+            {{title}}
+        </div>
+        <div class='card-body'>
+            <div class='table-responsive'>
+                <table class='table'>
+                    <tbody>
+
+                                <tr [class.has-error]="orderControlName.invalid && orderControlName.touched"
+                                    [class.has-success]="orderControlName.valid">
+                                      <td><label class="control-label">Name</label></td>
+                                      <label class="label"><input type="text" required name="o_name" [(ngModel)] ="orderItem.name" #orderControlName="ngModel"></label>                    
+                                      <span class="help-block" *ngIf="orderControlName.invalid && orderControlName.touched">Enter Your Name</span>
+                                </tr>
+
+      
+                                  <tr [class.has-error]="orderControlAge.invalid && orderControlAge.touched"
+                                      [class.has-success]="orderControlAge.valid">
+                                      <td><label required class="control-label">Age</label></td>
+                                      <label class="label"><input type="text" required name="o_age" [(ngModel)] ="orderItem.age" #orderControlAge="ngModel"></label>                                
+                                      <span class="help-block" *ngIf="orderControlAge.invalid && orderControlAge.touched">Enter Your Age</span>
+                                  </tr>
+
+                                  <tr [class.has-error]="orderControlPlace.invalid && orderControlPlace.touched"
+                                      [class.has-success]="orderControlPlace.valid">
+                                      <td><label class="control-label">Place</label></td>
+                                     
+                                        <select id="locality" required name="o_place" [(ngModel)]="orderItem.place" #orderControlPlace="ngModel" style="width: 26%; padding-top: 7px; margin-top: 4px; margin-left: 1%;"  >
+                             
+                                            <option hidden disabled selected value=""> -- Click to Choose -- </option>
+                                            
+                                            <option id='chittar'>Chittar</option>
+                                            <option id='vayyattupuzha'>Vayyattupuzha</option>
+                                            <option id='seethathodu'>Seethathodu</option>
+                                            <option id='karikayam'>Karikayam</option>
+                                            <option id='maniyar'>Maniyar</option>
+                                            <option id='konni'>Konni</option>
+                                            <option id='kumbazha'>Kumbazha</option>
+                                            <option id='mylapra'>Mylapra</option>
+                                            <option id='panniyar'>Panniyar</option>
+                                            <option id='pambini'>Pambini</option>
+                                            </select>&nbsp;
+
+                                      <span class="help-block" *ngIf="orderControlPlace.invalid && orderControlPlace.touched">Enter Your Place</span>
+                                  </tr>
+      
+                                  <tr [class.has-error]="orderControlNumber.invalid && orderControlNumber.touched"
+                                      [class.has-success]="orderControlNumber.valid">
+                                      <td><label class="control-label">Mobile Number</label></td>
+                                      <label class="label"><input type="text" required name="o_numb" [(ngModel)] ="orderItem.phoneNumber" #orderControlNumber="ngModel"></label>                              
+                                      <span class="help-block" *ngIf="orderControlNumber.invalid && orderControlNumber.touched">Enter Your Mobile Number</span>
+                                  </tr>
+      
+                                  <tr [class.has-error]="orderControlMedicine.invalid && orderControlMedicine.touched"
+                                      [class.has-success]="orderControlMedicine.valid">
+                                      <td><label class="control-label">Medicine Name</label></td>
+                                      <label class="label"><input type="text" required name="o_med" [(ngModel)] ="orderItem.medicineName" #orderControlMedicine="ngModel"></label> 
+                                      <span class="help-block" *ngIf="orderControlMedicine.invalid && orderControlMedicine.touched">Enter The Medicine You Want</span>                               
+                                  </tr>
+      
+                                  <tr [class.has-error]="orderControlDoctor.invalid && orderControlDoctor.touched"
+                                      [class.has-success]="orderControlDoctor.valid">
+                                      <td><label class="control-label">Doctor's Name</label></td>
+                                      <label class="label"><input type="text" required name="o_doc" [(ngModel)] ="orderItem.doctorsName" #orderControlDoctor="ngModel"></label> 
+                                      <span class="help-block"*ngIf="orderControlDoctor.invalid && orderControlDoctor.touched"> Enter Your Doctor's Name</span>                                
+                                  </tr>
+      
+                                  <tr [class.has-error]="orderControlPrescription.invalid && orderControlPrescription.touched"
+                                      [class.has-success]="orderControlPrescription.valid">
+                                      <td><label class="control-label">Upload Prescription</label></td>
+                                      <label class="label"><input type="file" required name="image" id="img" (change)="showFiles($event)" [(ngModel)] ="orderItem.prescription" #orderControlPrescription="ngModel"></label> 
+                                      <div class="container" style="border: 2px dotted rgba(173, 35, 81, 0.685); border-radius: 15px; height: 280px; width: 320px;">
+                                        <img id="preview" src="" alt="" width="250px" height="250px" style="margin:0 auto;">
+                                      </div>
+                                      <span class="help-block" *ngIf="orderControlPrescription.invalid && orderControlPrescription.touched">Upload Your Doctor's Prescription</span>                               
+                                  </tr>
+
+                                    <tr>
+                                      <td></td>
+                                      <td><button class="btn btn-custom" type="submit" [disabled]="orderForm.invalid">Place Order</button></td>   
+                                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </form>
+
+</div>
+
+
+
+<!-- <div class='card'>
+    <form  (ngSubmit)="AddOrder()">
+        <div class='card-header'>
+            {{title}}
+        </div>
+        <div class='card-body'>
+            <div class='table-responsive'>
+                <table class='table'>
+                    <tbody>
+                          <tr>
+                              <td><label>Name</label></td>
+                              <td><input type="text" name="o_name" [(ngModel)] ="orderItem.name"/></td>
+                          </tr>
+      
+                        <tr>
+                            <td><label>Age</label></td>
+                            <td><input type="text" name="o_age" [(ngModel)] ="orderItem.age"/></td> 
+                        </tr>
+                      
+                        <tr>
+                            <td><label>Place</label></td>
+                            <select id="locality" [(ngModel)]="orderItem.place" name="o_place" style="width: 26%; padding-top: 7px; margin-top: 4px; margin-left: 1.4%;"  >
+                             
+                              <option hidden disabled selected value=""> -- Click to Choose -- </option>
+                              
+                              <option id='chittar'>Chittar</option>
+                              <option id='vayyattupuzha'>Vayyattupuzha</option>
+                              <option id='seethathodu'>Seethathodu</option>
+                              <option id='karikayam'>Karikayam</option>
+                              <option id='maniyar'>Maniyar</option>
+
+                              </select>&nbsp;
+                              <input type="text">    
+                        </tr>
+                               
+                         <tr>
+                          <td><label>Mobile Number</label></td>
+                          <td><input type="text" name="o_numb" [(ngModel)] ="orderItem.phoneNumber"/></td>
+                         </tr>
+
+                         
+                        <tr>
+                          <td><label>Medicine Name</label></td>
+                          <td><input type="text" name="o_med" [(ngModel)] ="orderItem.medicineName"/></td>
+                      </tr>
+
+                      <tr>
+                          <td><label>Doctor's Name</label></td>
+                          <td><input type="text" name="o_doc" [(ngModel)] ="orderItem.doctorsName"/></td>
+                      </tr>
+      
+                      <tr>
+                          <td><label>Upload Prescription</label></td>
+                          <label class="label"><input type="file" name="image" id="img" (change)="showFiles($event)" [(ngModel)] ="orderItem.prescription"></label> 
+                          <div class="container" style="border: 2px dotted rgba(173, 35, 81, 0.685); border-radius: 15px; height: 280px; width: 320px;">
+                          <img id="preview" src="" alt="" width="250px" height="250px" style="margin:0 auto;">
+                          </div>
+                     </tr>
+
+                    <tr>
+                       <td></td>
+                       <td><button class="btn btn-custom" type="submit">Submit</button></td>   
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </form>
+
+</div> -->

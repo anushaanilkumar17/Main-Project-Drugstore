@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.heading{
+    font-size: 36px;
+    padding-top: 1%;
+    margin-bottom: auto;
+    text-align: center;
+    background-color: rgba(219, 147, 221, 0.562);
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(85, 2, 43);
+  }
+  
+  .slogan{
+    font-size: large;
+    margin-bottom: auto;
+    padding-bottom: 5%;
+    padding-left: 34%;
+    background-color: rgba(219, 147, 221, 0.562);;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(44, 1, 19, 0.945);
+  }
+
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-top: 1.5%;
+  }
+  
+  .carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+  
+  .carousel-inner .carousel-caption{
+    bottom: 100px;
+  }
+  .carousel-caption h5{
+    font-style: bold;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif; 
+    color: whitesmoke; 
+  }
+  
+.about{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(155, 6, 130);
+    font-size: 45px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2% ;  
+    text-align: center;
+}
+.aboutpara{
+    font-size: 15px;
+    color:rgb(15, 15, 15);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: rgba(212, 209, 203, 0.4);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3% ; 
+    border-radius: 3%;  
+}
+
+.container-fluid1{
+    background-image: url("../../assets/images/about.jpg");
+    background-size: cover;
+    border-radius: 5%;
+
+}
+
+.container-fluid{
+    background-image: url("../../assets/images/contact.jpg");
+    background-size: cover;
+    border-radius: 20%;
+
+}
+.contact-us{
+    height: 80vh;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    background:rgba(150, 140, 150, 0.671);
+    padding: 0 20px;
+    margin: 0 20px;
+    width: calc(33% - 20px);
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    border-radius: 2px 100px 2px 100px;
+   
+}
+
+.card-icon{
+    font-size: 28px;
+    background: rgb(106, 36, 128);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 40%;
+    transition: 0.3s linear;
+}
+
+.card:hover .card-icon{
+    background: none;
+    color: rgb(20, 20, 20);
+    transform: scale(1.6);
+}
+
+.card p{
+    margin-top: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(255, 251, 251);
+}
+
+.card:hover p{
+    max-height: 40px;
+    opacity: 1;
+}
+.quotes{
+    font-size: 28px;
+    font-style: italic;
+    color: rgb(255, 51, 0);
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .card{
+    width: 200%; 
+    height: 160px;
+    box-shadow: 0 5px 10px rgb(23, 61, 143);
+  }
+  .bg-custom-1{
+    background-color: rgb(221, 253, 253)!important;
+  }
+
+  .bg-custom-1:hover{
+    box-shadow: 2px 2px 10px black;
+  }
+  
+  
+  .card-title1{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(1, 2, 26, 0.705);
+    font-size: 25px;
+  }
+  
+  .card-text1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left; 
+    font-size: 16px;
+    color: rgb(184, 5, 115);
+  }
+  .card-title{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: darkblue;
+    font-size: 25px;
+  }
+  .card-text{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 13px;
+  }
+  
+  main{
+    margin-left: 8%;
+    margin-bottom: 5%;
+    
+  }
+  .card2{
+    box-shadow: 0px 0px 20px 1px rgba(41, 82, 109, 0.8);
+    border-radius:2%;
+  }
+  
+  .cardhead2{
+  font-family: monospace; 
+  font-weight: lighter; 
+  font-size: 40px;
+  color: rgb(107, 139, 19);
+  text-align: center;
+  
+  }
+  .card-title2{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(3, 4, 65);
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .card-text2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify; 
+    font-size: 12px;
+    color: rgb(64, 105, 121);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+  }
+  .main{
+    display: flex;
+    padding: 20px;
+    padding-top: 10px;  
+  }
+  
+  .container{
+    box-sizing: border-box;
+    width: 700%;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    border: 1px solid grey;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 12%;
+  
+  }
+  .container:hover{
+    box-shadow: 2px 2px 10px black;
+  }
+  .social-icons-box{
+    box-sizing: border-box;
+    background-color: rgba(59, 122, 158, 0.8);
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 1%;
+  }
+  .icons-head{
+   text-align: center;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: lighter;
+   padding-top: 1%;
+   color: rgb(248, 248, 250);
+  }
+
+
+

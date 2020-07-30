@@ -1,0 +1,86 @@
+.form-container{
+    border: 2px solid;
+    border-color: whitesmoke;
+    padding: 30px 40px;
+    background-color: rgba(243, 146, 252, 0.3);
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius:  0px 70px 0px 70px ;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(245, 152, 248, 0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(241, 127, 226, 0.75);
+    box-shadow: -1px 4px 26px 11px rgba(233, 172, 230, 0.75);
+}
+.form-group{
+    color: rgb(20, 19, 19);
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 1%;
+}
+.form-control{
+    font-size: 12px;
+    min-height: 20px;
+    font-weight: lighter;
+    border: 2px solid;
+    font-family: cursive;
+    box-shadow: 0 0 0.2rem rgb(247, 88, 60, 0.25);
+}
+
+.form-control:focus{
+    border-color: rgb(109, 3, 100);
+}
+
+.form-check{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(14, 13, 13);
+}
+
+header{
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-weight: lighter;
+    font-size: 30px;
+    color: rgb(150, 11, 120);
+}
+p{
+    color: rgb(15, 15, 15);
+    font-weight: bolder;
+    font-family: 'Times New Roman';
+    font-size: 15px;
+    text-align: center;
+}
+a{
+    color: rgb(189, 100, 115);
+    font-weight: lighter;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.btn-custom{
+    
+    border-color: rgb(134, 117, 114);
+    color: rgb(12, 12, 12);
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.btn-custom:focus,
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:active:focus{
+
+    background-color: rgba(247, 189, 239, 0.3);
+    border-color:brown;
+    color: rgb(170, 5, 143);
+}
+
+.btn-custom:focus{
+    box-shadow: 0 0 0.2rem rgba(252, 140, 121, 0.25);
+}

@@ -1,0 +1,74 @@
+<div class="card">
+
+    <form (ngSubmit)="updateOrder()"> 
+
+           <div class="card-header">
+               {{title}}
+           </div>
+
+           <div class="card-body">
+
+               <div class="card-responsive">
+
+                   <table class="table  table-bordered table-striped table-hover">
+
+                    <tbody>
+
+                        <tr>
+                            <td><label>Name</label></td>
+                            <td><input type="text" name="o_name" [(ngModel)] ="orderItem.name"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Age</label></td>
+                            <td><input type="text" name="o_age" [(ngModel)] ="orderItem.age"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Place</label></td>
+                            <select id="locality" name="o_place" style="width: 21.1%; padding-top: 7px; margin-top: 4px; margin-left: 1.4%;" >
+                             
+                              <option hidden disabled selected value=""> -- Click to Choose -- </option>
+                              
+                                                <option id='chittar'>Chittar</option>
+                                                <option id='vayyattupuzha'>Vayyattupuzha</option>
+                                                <option id='seethathodu'>Seethathodu</option>
+                                                <option id='karikayam'>Karikayam</option>
+                                                <option id='maniyar'>Maniyar</option>
+                                                <option id='konni'>Konni</option>
+                                                <option id='kumbazha'>Kumbazha</option>
+                                                <option id='mylapra'>Mylapra</option>
+                                                <option id='panniyar'>Panniyar</option>
+                                                <option id='pambini'>Pambini</option>
+
+                              </select>&nbsp;
+                               
+                        </tr>
+
+                        <tr>
+                            <td><label>Mobile Number</label></td>
+                            <td><input type="text" name="o_numb" [(ngModel)] ="orderItem.phoneNumber"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Medicine Name</label></td>
+                            <td><input type="text" name="o_med" [(ngModel)] ="orderItem.medicineName"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Doctor's Name</label></td>
+                            <td><input type="text" name="o_doc" [(ngModel)] ="orderItem.doctorsName"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td><button class="btn btn-custom">Update Order</button></td>
+                        </tr>
+                    </tbody>
+
+                   </table>
+
+               </div>
+           </div>
+       </form>
+</div>

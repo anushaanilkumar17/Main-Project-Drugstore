@@ -1,0 +1,86 @@
+
+  .bottom-ftr{
+    color: rgb(122, 7, 107); 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    background-color: rgb(207, 204, 204,0.8);
+    margin-top: 5%;
+    padding-bottom: 3%;
+  }
+
+  .on-ftr{
+    background: rgba(160, 157, 157, 0.9);
+    padding: 10px;
+    padding-left: 10%;
+    color: aliceblue;
+  }
+  .clr-2{
+    color: purple;
+  }
+  
+  .ftr-header{
+    font-family: monospace;
+  }
+  .ftr-input{
+    padding: 8px 0;
+  
+  }
+  .clr-link{
+    color: rgb(160, 17, 105);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+  }
+  .social-icons ul{
+    text-align: left;
+    padding-top: 2%;
+  }
+  .social-icons ul li{
+  display: inline-block;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  }
+  .social-icons ul li a{
+    display: block;
+    font-size: 25px;
+  }
+  
+   .fa-facebook{
+    color: #3b5998;
+    
+  }
+   .fa-twitter{
+    color: #38A1F3;
+    padding-left: 10px;
+  }
+  .fa-instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 20%;
+    padding-left: 10px;
+  }
+  .fa-youtube{
+    color:  #f01000;
+    padding-left: 10px;
+  }
+  .on-ftr{
+    background: rgb(170, 163, 163);
+    padding-left: 10%;
+  }
+  .clr-2{
+    color: purple;
+  }
+  
+  .ftr-input{
+    padding: 8px 0;
+  
+  }
+  .clr-link{
+    color: rgb(160, 17, 105);
+    font-family: serif;
+    font-size: 13px;
+  }
+  
+  
+  

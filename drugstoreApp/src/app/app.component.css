@@ -1,0 +1,24 @@
+ .navbar-dark{
+    width: 100%;
+    height: 16vh; 
+  }
+  
+  .bg-custom{
+    background-color: rgb(121, 33, 102);
+  }
+  
+  .navbar-nav a{
+    font-family:monospace;
+    font-size:26px;
+    font-style: normal;
+    font-weight: lighter;
+    border: 1px solid transparent;
+  }
+  
+  .navbar-nav a:hover{
+    background-color: rgba(2, 23, 29, 0.4);
+    transition: 0.3s linear;
+    border-radius: 15%;
+  }
+
+  

@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+</div>
+
+  <div class="card-body">
+
+
+    <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover"> 
+
+        <thead class="thead-custom">
+             <tr>
+                <th>PRESCRIPTION</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>PLACE</th>
+                <th>PHONE NUMBER</th>
+                <th>MEDICINE NAME </th>
+                <th>DOCTOR'S NAME</th>
+                <th>ACTIONS</th>
+            </tr>
+        </thead>
+
+          <tbody>
+            <tr *ngFor='let order of orders'>
+               <td><img
+               [src] = 'order.prescription'
+               [title] = 'order.name' 
+               [style.width.px] = 'imageWidth'
+               [style.margin.px] = 'imageMargin'></td>
+               <td>{{ order.name }}</td>
+               <td>{{ order.age }}</td>
+               <td>{{ order.place }}</td>
+               <td>{{ order.phoneNumber }}</td>
+               <td>{{ order.medicineName }}</td>
+               <td>{{ order.doctorsName }}</td>
+               <!-- <td><button class="btn btn-custom"  [routerLink]="['/update',order._id]">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <button class="btn btn-custom1"  (click)="deleteOrder(order._id)">Cancel</button></td> -->
+               
+               <td>
+                <a class="edit" class="btn btn-custom"  [routerLink]="['/update',order._id]" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="delete" class="btn btn-custom1" (click)="deleteOrder(order._id)" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+               </td>
+
+            </tr>
+          </tbody>    
+
+    </table>
+  </div>
+</div>
+
